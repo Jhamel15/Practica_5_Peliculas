@@ -11,29 +11,29 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SwaggerConfig {
 
-    @Bean
-    public OpenAPI customOpenAPI() {
+        @Bean
+        public OpenAPI customOpenAPI() {
 
-        Contact contacto = new Contact();
-        contacto.setName("Jhamel Javier Pinto Ubaldes");
-        contacto.setUrl("Universidad Autónoma Tomás Frías");
+                Contact contacto = new Contact();
+                contacto.setName("Jhamel Javier Pinto Ubaldes");
+                contacto.setUrl("Universidad Autónoma Tomás Frías");
 
-        return new OpenAPI()
+                return new OpenAPI()
 
-                .info(new Info()
-                        .title("API REST - Gestión de Películas")
-                        .version("1.0")
-                        .description(
-                                "Práctica 5 - Backend Spring Boot\n\n" +
-                                        "Tecnologías Emergentes SIS-414\n\n" +
-                                        "CRUD completo de la entidad Película utilizando Spring Boot, PostgreSQL y Swagger.")
-                        .contact(contacto)
-                        .license(
-                                new License()
-                                        .name("Universidad Autónoma Tomás Frías")))
+                                .info(new Info()
+                                                .title("API REST - Gestión de Películas")
+                                                .version("1.0")
+                                                .description(
+                                                                "Práctica 6 - Backend Spring Boot\n\n" +
+                                                                                "Tecnologías Emergentes SIS-414\n\n" +
+                                                                                "CRUD completo de la entidad Película utilizando Spring Boot, PostgreSQL y Swagger.")
+                                                .contact(contacto)
+                                                .license(
+                                                                new License()
+                                                                                .name("Universidad Autónoma Tomás Frías")))
 
-                .externalDocs(
-                        new ExternalDocumentation()
-                                .description("Tecnologías Emergentes - SIS 414"));
-    }
+                                .externalDocs(
+                                                new ExternalDocumentation()
+                                                                .description("Tecnologías Emergentes - SIS 414"));
+        }
 }
